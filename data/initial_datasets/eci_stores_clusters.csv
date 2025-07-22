@@ -1,0 +1,158 @@
+STORE_ID,BRAND,STORE_NAME,CLUSTER
+S00001,PrimeGoods,PrimeGoods - Hillsboro,Cluster_West_Coast
+S00002,MegaShop,MegaShop Indianapolis Eastside,Midwest_Cluster
+STORE0003,MarketExpress,MarketExpress - Las Vegas,Mountain_Cluster
+STORE0004,MegaShop,MegaShop - Oklahoma City,Texas_Cluster
+S00005,PrimeGoods,PrimeGoods - Charlotte,NC_Cluster
+000006,AsterionHouse,AsterionHouse - Miami,FL_Cluster
+S00007,LuxeRetail,LuxeRetail - Miami,FL_Cluster
+000008,LuxeRetail,LuxeRetail Macon Downtown,GA_Cluster
+S00009,MegaShop,MegaShop Detroit Center,Ohio_Great_Lakes
+S00010,AsterionHouse,AsterionHouse - Warren,Ohio_Great_Lakes
+S00011,FamilyStore,FamilyStore Indianapolis Eastside,Midwest_Cluster
+S00012,PrimeGoods,PrimeGoods - Savannah,GA_Cluster
+S00013,MarketExpress,MarketExpress - El Paso,Texas_Cluster
+S00014,FamilyStore,FamilyStore - Erie,PA_Cluster
+S00015,MegaShop,MegaShop - Houston,Texas_Cluster
+S00016,EssentialsPlus,EssentialsPlus Peoria Uptown,N/A
+000017,PrimeGoods,PrimeGoods - Chicago,Midwest_Cluster
+S00018,AsterionHouse,AsterionHouse - San Diego,Cluster_West_Coast
+S00019,QuickBuy,QuickBuy - Rochester,NY_Cluster
+S00020,FamilyStore,FamilyStore - Cleveland,N/A
+S00021,AsterionHouse,AsterionHouse - Mesa,Mountain_Cluster
+STORE0022,EssentialsPlus,EssentialsPlus - Spartanburg,SC_Cluster
+STORE0023,MarketExpress,MarketExpress - Los Angeles,Cluster_West_Coast
+S00024,FamilyStore,FamilyStore - Rochester,NY_Cluster
+S00025,MarketExpress,MarketExpress - Fort Wayne,N/A
+S00026,AsterionHouse,AsterionHouse - South Bend,Midwest_Cluster
+S00027,MegaShop,MegaShop Toledo Uptown,Ohio_Great_Lakes
+S00028,EssentialsPlus,EssentialsPlus - Warren,Ohio_Great_Lakes
+000029,AsterionHouse,AsterionHouse - Lawton,Texas_Cluster
+S00030,FamilyStore,FamilyStore - Albany,N/A
+S00031,EssentialsPlus,EssentialsPlus - Tulsa,N/A
+S00032,EssentialsPlus,EssentialsPlus Trenton Downtown,NJ_Cluster
+S00033,EssentialsPlus,EssentialsPlus Dallas Plaza,Texas_Cluster
+S00034,BudgetShop,BudgetShop - Hillsboro,Cluster_West_Coast
+S00035,BudgetShop,BudgetShop - Tampa,FL_Cluster
+S00036,EssentialsPlus,EssentialsPlus - Toledo,Ohio_Great_Lakes
+S00037,AsterionHouse,AsterionHouse Miami Westside,FL_Cluster
+S00038,AsterionHouse,AsterionHouse - Spokane,Cluster_West_Coast
+S00039,EssentialsPlus,EssentialsPlus - Wilmington,NC_Cluster
+S00040,EssentialsPlus,EssentialsPlus - Salem,Cluster_West_Coast
+S00041,AsterionHouse,AsterionHouse - Norman,Texas_Cluster
+000042,EssentialsPlus,EssentialsPlus - Spartanburg,SC_Cluster
+S00043,PrimeGoods,PrimeGoods - Augusta,GA_Cluster
+S00044,EssentialsPlus,EssentialsPlus - Las Cruces,Texas_Cluster
+S00045,AsterionHouse,AsterionHouse - Paterson,NJ_Cluster
+S00046,EssentialsPlus,EssentialsPlus - Greenville,N/A
+S00047,LuxeRetail,LuxeRetail - Buffalo,NY_Cluster
+S00048,PrimeGoods,PrimeGoods - Allentown,PA_Cluster
+STORE0049,LuxeRetail,LuxeRetail - Santa Fe,Texas_Cluster
+STORE0050,EssentialsPlus,EssentialsPlus - New York,NY_Cluster
+STORE0051,MegaShop,MegaShop - Lakewood,Mountain_Cluster
+000052,EssentialsPlus,EssentialsPlus - Wilmington,NC_Cluster
+000053,MegaShop,MegaShop Carmel Eastside,Midwest_Cluster
+S00054,LuxeRetail,LuxeRetail - Colorado Springs,Mountain_Cluster
+S00055,BudgetShop,BudgetShop - Phoenix,Mountain_Cluster
+000056,QuickBuy,QuickBuy - Columbia,SC_Cluster
+S00057,MarketExpress,MarketExpress Bellevue Plaza,N/A
+S00058,PrimeGoods,PrimeGoods - Syracuse,NY_Cluster
+S00059,AsterionHouse,AsterionHouse Elizabeth Uptown,NJ_Cluster
+S00060,QuickBuy,QuickBuy - Phoenix,Mountain_Cluster
+S00061,LuxeRetail,LuxeRetail - Carmel,Midwest_Cluster
+S00062,PrimeGoods,PrimeGoods San Jose Downtown,Cluster_West_Coast
+S00063,PrimeGoods,PrimeGoods - Macon,GA_Cluster
+S00064,LuxeRetail,LuxeRetail - Houston,Texas_Cluster
+S00065,BudgetShop,BudgetShop - Charlotte,NC_Cluster
+S00066,MarketExpress,MarketExpress - New York,NY_Cluster
+S00067,LuxeRetail,LuxeRetail Glendale Uptown,Mountain_Cluster
+S00068,MarketExpress,MarketExpress - Lakewood,Mountain_Cluster
+S00069,MegaShop,MegaShop - Charleston,SC_Cluster
+S00070,LuxeRetail,LuxeRetail Savannah Uptown,N/A
+STORE0071,AsterionHouse,AsterionHouse Reading Uptown,PA_Cluster
+S00072,MarketExpress,MarketExpress - Las Vegas,Mountain_Cluster
+000073,AsterionHouse,AsterionHouse - Atlanta,GA_Cluster
+S00074,QuickBuy,QuickBuy - Waterbury,Northeast_Cluster
+S00075,BudgetShop,BudgetShop - Chicago,Midwest_Cluster
+S00076,EssentialsPlus,EssentialsPlus - Atlanta,GA_Cluster
+S00077,MegaShop,MegaShop - Erie,PA_Cluster
+STORE0078,MegaShop,MegaShop - Lowell,Northeast_Cluster
+000079,QuickBuy,QuickBuy - Charleston,SC_Cluster
+S00080,AsterionHouse,AsterionHouse - Augusta,GA_Cluster
+S00081,BudgetShop,BudgetShop - Spartanburg,SC_Cluster
+000082,QuickBuy,QuickBuy - Las Vegas,Mountain_Cluster
+S00083,AsterionHouse,AsterionHouse - Orlando,FL_Cluster
+S00084,MegaShop,MegaShop - Erie,PA_Cluster
+S00085,PrimeGoods,PrimeGoods - Orlando,FL_Cluster
+S00086,MegaShop,MegaShop - Raleigh,NC_Cluster
+S00087,PrimeGoods,PrimeGoods - Norman,Texas_Cluster
+S00088,FamilyStore,FamilyStore - Newark,NJ_Cluster
+S00089,QuickBuy,QuickBuy - Houston,Texas_Cluster
+S00090,PrimeGoods,PrimeGoods - Trenton,NJ_Cluster
+S00091,QuickBuy,QuickBuy - New York,NY_Cluster
+STORE0092,MegaShop,MegaShop - Hartford,Northeast_Cluster
+S00093,EssentialsPlus,EssentialsPlus - Elizabeth,NJ_Cluster
+000094,LuxeRetail,LuxeRetail - Tallahassee,FL_Cluster
+S00095,MarketExpress,MarketExpress - Aurora,N/A
+S00096,PrimeGoods,PrimeGoods New York Westside,N/A
+S00097,PrimeGoods,PrimeGoods - Columbus,GA_Cluster
+S00098,EssentialsPlus,EssentialsPlus - Spartanburg,N/A
+S00099,LuxeRetail,LuxeRetail Erie Plaza,PA_Cluster
+S00100,MarketExpress,MarketExpress - Newark,NJ_Cluster
+S00101,BudgetShop,BudgetShop - Albany,NY_Cluster
+S00102,MarketExpress,MarketExpress - Elizabeth,NJ_Cluster
+S00103,EssentialsPlus,EssentialsPlus - Columbus,GA_Cluster
+S00104,MarketExpress,MarketExpress - Toledo,Ohio_Great_Lakes
+S00105,MegaShop,MegaShop Fort Worth Downtown,Texas_Cluster
+S00106,MarketExpress,MarketExpress - Toledo,Ohio_Great_Lakes
+S00107,EssentialsPlus,EssentialsPlus - Chicago,Midwest_Cluster
+S00108,MegaShop,MegaShop - Stamford,Northeast_Cluster
+000109,EssentialsPlus,EssentialsPlus - Philadelphia,PA_Cluster
+S00110,EssentialsPlus,EssentialsPlus Detroit Downtown,Ohio_Great_Lakes
+S00111,MegaShop,MegaShop - Lawton,Texas_Cluster
+S00112,MegaShop,MegaShop - Durham,N/A
+S00113,BudgetShop,BudgetShop Albany Westside,NY_Cluster
+S00114,BudgetShop,BudgetShop - Los Angeles,Cluster_West_Coast
+STORE0115,EssentialsPlus,EssentialsPlus - Columbus,Ohio_Great_Lakes
+STORE0116,MarketExpress,MarketExpress Hillsboro Eastside,Cluster_West_Coast
+S00117,QuickBuy,QuickBuy Greensboro Westside,NC_Cluster
+STORE0118,PrimeGoods,PrimeGoods - Columbia,SC_Cluster
+S00119,QuickBuy,QuickBuy - Reading,PA_Cluster
+S00120,LuxeRetail,LuxeRetail Lansing Center,Ohio_Great_Lakes
+S00121,EssentialsPlus,EssentialsPlus - Spokane,Cluster_West_Coast
+S00122,BudgetShop,BudgetShop - Charleston,SC_Cluster
+STORE0123,LuxeRetail,LuxeRetail - Portland,Cluster_West_Coast
+S00124,PrimeGoods,PrimeGoods - Erie,PA_Cluster
+S00125,MegaShop,MegaShop - Durham,NC_Cluster
+S00126,BudgetShop,BudgetShop - Springfield,N/A
+S00127,EssentialsPlus,EssentialsPlus - Orlando,N/A
+S00128,BudgetShop,BudgetShop - Jersey City,NJ_Cluster
+STORE0129,QuickBuy,QuickBuy - Stamford,Northeast_Cluster
+S00130,PrimeGoods,PrimeGoods Spokane Eastside,Cluster_West_Coast
+S00131,LuxeRetail,LuxeRetail - Columbia,SC_Cluster
+000132,MarketExpress,MarketExpress - Aurora,Midwest_Cluster
+STORE0133,PrimeGoods,PrimeGoods Salem Uptown,Cluster_West_Coast
+S00134,LuxeRetail,LuxeRetail Wilmington Plaza,N/A
+S00135,MegaShop,MegaShop - Rochester,NY_Cluster
+S00136,MarketExpress,MarketExpress Lakewood Uptown,Mountain_Cluster
+S00137,MarketExpress,MarketExpress - Macon,GA_Cluster
+S00138,MarketExpress,MarketExpress - Orlando,FL_Cluster
+S00139,MegaShop,MegaShop - Raleigh,N/A
+S00140,FamilyStore,FamilyStore - Greenville,N/A
+S00141,LuxeRetail,LuxeRetail Miami Plaza,FL_Cluster
+S00142,PrimeGoods,PrimeGoods - Orlando,FL_Cluster
+S00143,BudgetShop,BudgetShop Mesa Westside,Mountain_Cluster
+S00144,QuickBuy,QuickBuy - Hillsboro,Cluster_West_Coast
+S00145,PrimeGoods,PrimeGoods - North Las Vegas,Mountain_Cluster
+S00146,BudgetShop,BudgetShop - Hillsboro,Cluster_West_Coast
+S00147,BudgetShop,BudgetShop - Tallahassee,FL_Cluster
+S00148,BudgetShop,BudgetShop - Akron,Ohio_Great_Lakes
+STORE0149,QuickBuy,QuickBuy - Atlanta,GA_Cluster
+S00150,LuxeRetail,LuxeRetail - Seattle,Cluster_West_Coast
+000151,MarketExpress,MarketExpress - Paterson,NJ_Cluster
+S00152,MegaShop,MegaShop - Albany,NY_Cluster
+S00153,MegaShop,MegaShop - Oklahoma City,Texas_Cluster
+S00154,BudgetShop,BudgetShop - Newark,NJ_Cluster
+S00155,EssentialsPlus,EssentialsPlus - Columbia,SC_Cluster
+S00156,FamilyStore,FamilyStore - Naperville,Midwest_Cluster
+S00157,PrimeGoods,PrimeGoods Allentown Downtown,PA_Cluster

@@ -1,0 +1,81 @@
+sku,product_name,price_group_id,price_group_name,group_type
+BOOEDTE001,PageTurn Essential Textbooks,BACK_TO_SCHOOL_01,Back to School Essentials,Seasonal
+BOOEDTE002,Bookworm Advanced Textbooks,BACK_TO_SCHOOL_01,Back to School Essentials,Seasonal
+BOOEDTE004,PageTurn Essential Textbooks,BACK_TO_SCHOOL_01,Back to School Essentials,Seasonal
+CLOMESH002,DressRight Shirts Collection,BACK_TO_SCHOOL_01,Back to School Essentials,Seasonal
+CLOMESH005,StyleX Relaxed Shirts,BACK_TO_SCHOOL_01,Back to School Essentials,Seasonal
+CLOMESH013,Fashionista Relaxed Shirts,BACK_TO_SCHOOL_01,Back to School Essentials,Seasonal
+ELECOLA004,TechPro Laptops Elite 2025,BACK_TO_SCHOOL_01,Back to School Essentials,Seasonal
+ELECOLA006,Electra Laptops Edge XL,BACK_TO_SCHOOL_01,Back to School Essentials,Seasonal
+ELECOLA009,ByteWare Laptops Smart 2025,BACK_TO_SCHOOL_01,Back to School Essentials,Seasonal
+TOYEDST001,ToyWorld Junior STEM,BACK_TO_SCHOOL_01,Back to School Essentials,Seasonal
+TOYEDST004,ToyWorld Adventure STEM,BACK_TO_SCHOOL_01,Back to School Essentials,Seasonal
+TOYEDST007,KidJoy Creative STEM,BACK_TO_SCHOOL_01,Back to School Essentials,Seasonal
+CLOMEPA001,ThreadWell Pants Collection,CASUAL_BOTTOMS_01,Casual Bottoms,Substitute
+CLOMEPA002,DressRight Regular Pants,CASUAL_BOTTOMS_01,Casual Bottoms,Substitute
+CLOMEPA008,StyleX Pants Collection,CASUAL_BOTTOMS_01,Casual Bottoms,Substitute
+CLOMEPA009,Fashionista Modern Pants,CASUAL_BOTTOMS_01,Casual Bottoms,Substitute
+CLOWOBO002,Attire Regular Bottoms,CASUAL_BOTTOMS_01,Casual Bottoms,Substitute
+CLOWOBO007,ThreadWell Bottoms Collection,CASUAL_BOTTOMS_01,Casual Bottoms,Substitute
+CLOWOBO009,Fashionista Bottoms Collection,CASUAL_BOTTOMS_01,Casual Bottoms,Substitute
+CLOWOBO015,DressRight Slim Bottoms,CASUAL_BOTTOMS_01,Casual Bottoms,Substitute
+ELEAUHE002,TechPro Headphones Air Pro,COMP_SETUP_01,Computer Setup Essentials,Bundle
+ELEAUHE009,Electra Headphones Air XL,COMP_SETUP_01,Computer Setup Essentials,Bundle
+ELEAUHE011,Electra Headphones Pro XL,COMP_SETUP_01,Computer Setup Essentials,Bundle
+ELEAUHE012,Innovate Headphones Mini X,COMP_SETUP_01,Computer Setup Essentials,Bundle
+ELECODE002,TechPro Desktops Plus S,COMP_SETUP_01,Computer Setup Essentials,Bundle
+ELECODE003,Innovate Desktops Pro Pro,COMP_SETUP_01,Computer Setup Essentials,Bundle
+ELECODE004,ByteWare Desktops Ultra XL,COMP_SETUP_01,Computer Setup Essentials,Bundle
+ELECODE011,Electra Desktops Smart Pro,COMP_SETUP_01,Computer Setup Essentials,Bundle
+ELECOLA001,TechPro Laptops Smart 2025,COMP_SETUP_01,Computer Setup Essentials,Bundle
+ELECOLA002,Electra Laptops Ultra Pro,COMP_SETUP_01,Computer Setup Essentials,Bundle
+ELECOLA003,CircuitCity Laptops Air 2024,COMP_SETUP_01,Computer Setup Essentials,Bundle
+ELECOLA006,Electra Laptops Edge XL,COMP_SETUP_01,Computer Setup Essentials,Bundle
+ELEMOAC001,Electra Accessories Ultra X,COMP_SETUP_01,Computer Setup Essentials,Bundle
+ELEMOAC007,CircuitCity Accessories Mini 2025,COMP_SETUP_01,Computer Setup Essentials,Bundle
+ELEMOAC008,ByteWare Accessories Air 2025,COMP_SETUP_01,Computer Setup Essentials,Bundle
+ELEMOAC009,TechPro Accessories Air X,COMP_SETUP_01,Computer Setup Essentials,Bundle
+SPOFIAP001,ActiveLife Pro Apparel,FITNESS_COMBO_01,Complete Fitness Package,Bundle
+SPOFIAP005,FitZone Performance Apparel,FITNESS_COMBO_01,Complete Fitness Package,Bundle
+SPOFIEQ004,FitZone Sport Equipment,FITNESS_COMBO_01,Complete Fitness Package,Bundle
+SPOFIEQ009,FitZone Endurance Equipment,FITNESS_COMBO_01,Complete Fitness Package,Bundle
+SPOFISU004,FitZone Pro Supplements,FITNESS_COMBO_01,Complete Fitness Package,Bundle
+SPOFISU006,SportsGear Pro Supplements,FITNESS_COMBO_01,Complete Fitness Package,Bundle
+BOOFIMY002,ReadNow Guide Mystery,GIFT_UNDER_50_01,Gift Ideas Under $50,Promotional
+BOOFIMY005,KnowledgeBase Complete Mystery,GIFT_UNDER_50_01,Gift Ideas Under $50,Promotional
+BOOFIMY006,Bookworm Essential Mystery,GIFT_UNDER_50_01,Gift Ideas Under $50,Promotional
+BOOFIMY008,Bookworm Essential Mystery,GIFT_UNDER_50_01,Gift Ideas Under $50,Promotional
+ELEMOAC002,TechPro Accessories Edge 2025,GIFT_UNDER_50_01,Gift Ideas Under $50,Promotional
+ELEMOAC006,Innovate Accessories Mini 2025,GIFT_UNDER_50_01,Gift Ideas Under $50,Promotional
+ELEMOAC008,ByteWare Accessories Air 2025,GIFT_UNDER_50_01,Gift Ideas Under $50,Promotional
+ELEMOAC009,TechPro Accessories Air X,GIFT_UNDER_50_01,Gift Ideas Under $50,Promotional
+ELECOLA005,CircuitCity Laptops Pro S,MOBILE_DEVICES_01,Personal Computing Devices,Substitute
+ELECOLA006,Electra Laptops Edge XL,MOBILE_DEVICES_01,Personal Computing Devices,Substitute
+ELECOLA009,ByteWare Laptops Smart 2025,MOBILE_DEVICES_01,Personal Computing Devices,Substitute
+ELECOTA001,CircuitCity Tablets Max S,MOBILE_DEVICES_01,Personal Computing Devices,Substitute
+ELECOTA002,Electra Tablets Mini XL,MOBILE_DEVICES_01,Personal Computing Devices,Substitute
+ELECOTA007,Innovate Tablets Mini XL,MOBILE_DEVICES_01,Personal Computing Devices,Substitute
+ELEMOSM002,Electra Smartphones Edge XL,MOBILE_DEVICES_01,Personal Computing Devices,Substitute
+ELEMOSM004,TechPro Smartphones Max 5,MOBILE_DEVICES_01,Personal Computing Devices,Substitute
+ELEMOSM006,ByteWare Smartphones Mini S,MOBILE_DEVICES_01,Personal Computing Devices,Substitute
+GROBESO003,FreshPick Fresh Soda,MOVIE_NIGHT_01,Movie Night Snacks,Bundle
+GROBESO005,PantryBasics Natural Soda,MOVIE_NIGHT_01,Movie Night Snacks,Bundle
+GROBESO006,FreshPick Gourmet Soda,MOVIE_NIGHT_01,Movie Night Snacks,Bundle
+GROBESO007,MarketEssentials Organic Soda,MOVIE_NIGHT_01,Movie Night Snacks,Bundle
+GROSNCH008,TastyBites Organic Chips,MOVIE_NIGHT_01,Movie Night Snacks,Bundle
+GROSNCH014,TastyBites Organic Chips,MOVIE_NIGHT_01,Movie Night Snacks,Bundle
+GROSNCH018,GoodEats Fresh Chips,MOVIE_NIGHT_01,Movie Night Snacks,Bundle
+GROSNCH023,MarketEssentials Premium Chips,MOVIE_NIGHT_01,Movie Night Snacks,Bundle
+GROSNCO001,TastyBites Premium Cookies,MOVIE_NIGHT_01,Movie Night Snacks,Bundle
+GROSNCO009,FreshPick Classic Cookies,MOVIE_NIGHT_01,Movie Night Snacks,Bundle
+GROSNCO015,MarketEssentials Organic Cookies,MOVIE_NIGHT_01,Movie Night Snacks,Bundle
+GROSNCO019,GoodEats Classic Cookies,MOVIE_NIGHT_01,Movie Night Snacks,Bundle
+BOONOSE002,PageTurn Complete Self-Help,WELLNESS_BUNDLE_01,Wellness & Self-Care,Lifestyle
+BOONOSE003,PageTurn Master Self-Help,WELLNESS_BUNDLE_01,Wellness & Self-Care,Lifestyle
+BOONOSE005,ReadNow Guide Self-Help,WELLNESS_BUNDLE_01,Wellness & Self-Care,Lifestyle
+SPOFIEQ004,FitZone Sport Equipment,WELLNESS_BUNDLE_01,Wellness & Self-Care,Lifestyle
+SPOFIEQ005,ActiveLife Active Equipment,WELLNESS_BUNDLE_01,Wellness & Self-Care,Lifestyle
+SPOFIEQ007,FitZone Active Equipment,WELLNESS_BUNDLE_01,Wellness & Self-Care,Lifestyle
+SPOFISU002,AthletePro Sport Supplements,WELLNESS_BUNDLE_01,Wellness & Self-Care,Lifestyle
+SPOFISU004,FitZone Pro Supplements,WELLNESS_BUNDLE_01,Wellness & Self-Care,Lifestyle
+SPOFISU008,FitZone Elite Supplements,WELLNESS_BUNDLE_01,Wellness & Self-Care,Lifestyle

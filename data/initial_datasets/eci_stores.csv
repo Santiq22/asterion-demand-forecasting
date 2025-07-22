@@ -1,0 +1,158 @@
+STORE_ID,BRAND,STORE_NAME,ADDRESS1,ADDRESS2,CITY,STATE,ZIP,OPENDATE,CLOSEDATE,STORE_TYPE,REGION
+S00001,PrimeGoods,PrimeGoods - Hillsboro,5735 NE Washington Pl,,Hillsboro,OR,74820,2015-01-10 00:00:00,,Express,West
+S00002,MegaShop,MegaShop Indianapolis Eastside,3557  Cedar Ct,Unit 89,Indianapolis,IN,33483-1775,2012-03-23 00:00:00,,Express,Midwest
+STORE0003,MarketExpress,MarketExpress - Las Vegas,7870 W Church Ave,,Las Vegas,NV,49099,2021-09-23 00:00:00,,Outlet,West
+STORE0004,MegaShop,MegaShop - Oklahoma City,3105 N Washington Pl,,Oklahoma City,OK,80592,06/30/2015,,Mall,Southwest
+S00005,PrimeGoods,PrimeGoods - Charlotte,8756 SW Maple Ln,Suite 848,Charlotte,NC,32299,2019-06-10 00:00:00,,Express,Southeast
+000006,AsterionHouse,AsterionHouse - Miami,1307 NE Maple Ct,,Miami,FL,13748,2014-02-24 00:00:00,2028-02-21 00:00:00,Mall,Southeast
+S00007,LuxeRetail,LuxeRetail - Miami,699  Oak Dr,Building A,Miami,FL,36309,2020-10-10 00:00:00,,Mall,Southeast
+000008,LuxeRetail,LuxeRetail Macon Downtown,9987 SW River Rd,Floor 4,Macon,GA,93879,2014-04-30 00:00:00,,Express,Southeast
+S00009,MegaShop,MegaShop Detroit Center,5424  Cedar Ln,,Detroit,MI,52642,2016-10-17 00:00:00,2029-10-14 00:00:00,Flagship,Midwest
+S00010,AsterionHouse,AsterionHouse - Warren,957 E Main Rd,Floor 4,Warren,MI,96416,2007-02-23 00:00:00,,Outlet,Midwest
+S00011,FamilyStore,FamilyStore Indianapolis Eastside,7997 NW Maple Blvd,,Indianapolis,IN,,2014-01-13 00:00:00,,Mall,Midwest
+S00012,PrimeGoods,PrimeGoods - Savannah,5443 SW Park Ave,,Savannah,GA,92074,2019-05-07 00:00:00,,Street,Southeast
+S00013,MarketExpress,MarketExpress - El Paso,4496 N Pine Way,Building B,El Paso,TX,,2019-10-14 00:00:00,,Mall,Southwest
+S00014,FamilyStore,FamilyStore - Erie,4143  Park Rd,Suite 469,Erie,PA,35945,2014-11-05 00:00:00,,Street,Northeast
+S00015,MegaShop,MegaShop - Houston,3344 SE Church Ln,,Houston,TX,77215,2017-06-11 00:00:00,,Street,Southwest
+S00016,EssentialsPlus,EssentialsPlus Peoria Uptown,2850 E Hill Blvd,,Peoria,IL,14611,2014-12-31 00:00:00,,Express,Midwest
+000017,PrimeGoods,PrimeGoods - Chicago,3914 E Green Ave,Suite 853,Chicago,IL,25305,2008-02-10 00:00:00,,Mall,Midwest
+S00018,AsterionHouse,AsterionHouse - San Diego,4080 S Main Way,,San Diego,CA,54811,2020-09-26 00:00:00,,Superstore,West
+S00019,QuickBuy,QuickBuy - Rochester,4172 W View Rd,,Rochester,NY,99112,2014-08-17 00:00:00,,Mall,Northeast
+S00020,FamilyStore,FamilyStore - Cleveland,4847 S Hill St,Unit 46,Cleveland,OH,93460,2013-05-29 00:00:00,,Street,Midwest
+S00021,AsterionHouse,AsterionHouse - Mesa,8906  Washington Blvd,Floor 4,Mesa,AZ,52918,2014-10-31 00:00:00,2023-10-29,Boutique,Southwest
+STORE0022,EssentialsPlus,EssentialsPlus - Spartanburg,6191  Forest St,,Spartanburg,SC,34504,2015-11-19 00:00:00,,Mall,Southeast
+STORE0023,MarketExpress,MarketExpress - Los Angeles,6133  View Blvd,,Los Angeles,CA,60990,2010-06-13 00:00:00,,Express,West
+S00024,FamilyStore,FamilyStore - Rochester,8703 E Church Way,,Rochester,NY,90642,2014-07-07 00:00:00,,Mall,Northeast
+S00025,MarketExpress,MarketExpress - Fort Wayne,250 SE Elm Blvd,,Fort Wayne,IN,34285,2020-06-07 00:00:00,,Boutique,Midwest
+S00026,AsterionHouse,AsterionHouse - South Bend,4638  Pine St,,South Bend,IN,97369,2016-02-26 00:00:00,,Street,Midwest
+S00027,MegaShop,MegaShop Toledo Uptown,9912 NE Church Blvd,,Toledo,OH,21314,2013-08-09 00:00:00,,Street,Midwest
+S00028,EssentialsPlus,EssentialsPlus - Warren,2879 W Main Rd,,Warren,MI,10302,2019-07-19 00:00:00,,Outlet,Midwest
+000029,AsterionHouse,AsterionHouse - Lawton,3346 NE Pine Blvd,Suite 730,Lawton,OK,57915-5632,2024-02-17 00:00:00,,Outlet,Southwest
+S00030,FamilyStore,FamilyStore - Albany,2740  Oak Pl,,Albany,NY,37285,2020-10-07 00:00:00,,Mall,Northeast
+S00031,EssentialsPlus,EssentialsPlus - Tulsa,8660  Maple Dr,,Tulsa,OK,63441,2015-11-23 00:00:00,,Mall,Southwest
+S00032,EssentialsPlus,EssentialsPlus Trenton Downtown,2027 SW Elm Ave,,Trenton,NJ,49809,2018-10-08 00:00:00,,Warehouse,Northeast
+S00033,EssentialsPlus,EssentialsPlus Dallas Plaza,2636 W Main Pl,,Dallas,TX,,2018-09-21 00:00:00,,Superstore,Southwest
+S00034,BudgetShop,BudgetShop - Hillsboro,6566 SE Market St,Floor 5,Hillsboro,OR,51157,2016-04-20 00:00:00,,Express,West
+S00035,BudgetShop,BudgetShop - Tampa,951 S Maple Dr,,Tampa,FL,56197,2018-11-18 00:00:00,,Outlet,Southeast
+S00036,EssentialsPlus,EssentialsPlus - Toledo,794 E Cedar Rd,Floor 6,Toledo,OH,12443,2021-04-23 00:00:00,,Street,Midwest
+S00037,AsterionHouse,AsterionHouse Miami Westside,3798  Main Ln,,Miami,FL,29256,05/16/2011,,Street,Southeast
+S00038,AsterionHouse,AsterionHouse - Spokane,8667  Main Blvd,Unit 71,Spokane,WA,,2013-12-30 00:00:00,,Street,West
+S00039,EssentialsPlus,EssentialsPlus - Wilmington,9182  River Pl,,Wilmington,NC,96444,2014-10-27 00:00:00,,Mall,Southeast
+S00040,EssentialsPlus,EssentialsPlus - Salem,1482  Oak St,Building E,Salem,OR,86534-6954,2001-08-29 00:00:00,,Mall,West
+S00041,AsterionHouse,AsterionHouse - Norman,4548  Elm Ln,,Norman,OK,14425-9966,2012-07-08 00:00:00,,Street,Southwest
+000042,EssentialsPlus,EssentialsPlus - Spartanburg,1556  Elm Ct,,Spartanburg,SC,27771,2020-10-27 00:00:00,,Outlet,Southeast
+S00043,PrimeGoods,PrimeGoods - Augusta,2542  Hill Ave,Floor 2,Augusta,GA,41653,2013-08-02 00:00:00,,Street,Southeast
+S00044,EssentialsPlus,EssentialsPlus - Las Cruces,9901  Cedar Ave,Suite 462,Las Cruces,NM,67492,2015-08-30 00:00:00,,Outlet,Southwest
+S00045,AsterionHouse,AsterionHouse - Paterson,1763  Main Ave,,Paterson,NJ,45111,02/22/2006,,Flagship,Northeast
+S00046,EssentialsPlus,EssentialsPlus - Greenville,6961 S Hill Ct,,Greenville,SC,10338,2008-10-04 00:00:00,,Mall,Southeast
+S00047,LuxeRetail,LuxeRetail - Buffalo,7125 NW Washington Ln,,Buffalo,NY,51786,10/18/2009,,Mall,Northeast
+S00048,PrimeGoods,PrimeGoods - Allentown,2984 NE Washington Way,,Allentown,PA,17564,08/08/2018,,Street,Northeast
+STORE0049,LuxeRetail,LuxeRetail - Santa Fe,2033 NE Cedar Ct,,Santa Fe,NM,60072,2012-05-26 00:00:00,,Mall,Southwest
+STORE0050,EssentialsPlus,EssentialsPlus - New York,7512 S River Ln,,New York,NY,66638,05/30/2020,,Flagship,Northeast
+STORE0051,MegaShop,MegaShop - Lakewood,8246  Main Ct,,Lakewood,CO,17657,2010-11-04 00:00:00,2018-11-02 00:00:00,Mall,West
+000052,EssentialsPlus,EssentialsPlus - Wilmington,1219  View Ct,,Wilmington,NC,91121,2017-08-11 00:00:00,,Mall,Southeast
+000053,MegaShop,MegaShop Carmel Eastside,2163  Park Pl,,Carmel,IN,96231,2017-06-15 00:00:00,,Outlet,Midwest
+S00054,LuxeRetail,LuxeRetail - Colorado Springs,2809 N Washington Ln,,Colorado Springs,CO,58845,2015-06-25 00:00:00,,Express,West
+S00055,BudgetShop,BudgetShop - Phoenix,9440  View Ln,Unit 20,Phoenix,AZ,90395,2022-07-11 00:00:00,,Street,Southwest
+000056,QuickBuy,QuickBuy - Columbia,9646 NW Maple St,Suite 588,Columbia,SC,70545,2009-09-29 00:00:00,,,Southeast
+S00057,MarketExpress,MarketExpress Bellevue Plaza,3057  View Ave,,Bellevue,WA,49341,2020-06-18 00:00:00,2034-06-15 00:00:00,Express,West
+S00058,PrimeGoods,PrimeGoods - Syracuse,1876 NE Elm Ct,Floor 8,Syracuse,NY,36589,2023-10-14 00:00:00,,Outlet,Northeast
+S00059,AsterionHouse,AsterionHouse Elizabeth Uptown,2721 SW Church Ave,,Elizabeth,NJ,55004-2949,2020-11-24 00:00:00,,Mall,Northeast
+S00060,QuickBuy,QuickBuy - Phoenix,6918  Market Ct,,Phoenix,AZ,13389,07/07/2021,,Street,Southwest
+S00061,LuxeRetail,LuxeRetail - Carmel,1561  Hill Blvd,,Carmel,IN,12356,2017-01-23 00:00:00,,Street,Midwest
+S00062,PrimeGoods,PrimeGoods San Jose Downtown,159 NE Park Rd,,San Jose,CA,49063,2023-03-23 00:00:00,,Mall,West
+S00063,PrimeGoods,PrimeGoods - Macon,2959 E Hill Pl,,Macon,GA,76061,2002-10-28 00:00:00,,Outlet,Southeast
+S00064,LuxeRetail,LuxeRetail - Houston,8220 E Cedar Ln,,Houston,TX,22588,2009-03-21 00:00:00,,Boutique,Southwest
+S00065,BudgetShop,BudgetShop - Charlotte,3179  Cedar Ln,,Charlotte,NC,93310,2014-07-26 00:00:00,,Mall,Southeast
+S00066,MarketExpress,MarketExpress - New York,1230  Maple Ln,,New York,NY,55272-8473,12/05/2008,,Outlet,Northeast
+S00067,LuxeRetail,LuxeRetail Glendale Uptown,8321  Green Dr,,Glendale,AZ,57414,2016-09-19 00:00:00,,Boutique,Southwest
+S00068,MarketExpress,MarketExpress - Lakewood,8126  Oak Dr,,Lakewood,CO,82460,2018-11-14 00:00:00,,Express,West
+S00069,MegaShop,MegaShop - Charleston,1368 E Washington Ct,,Charleston,SC,19108,2019-03-29 00:00:00,,Outlet,Southeast
+S00070,LuxeRetail,LuxeRetail Savannah Uptown,1178 S Cedar Ave,,Savannah,GA,83770,2023-06-05 00:00:00,,Mall,Southeast
+STORE0071,AsterionHouse,AsterionHouse Reading Uptown,4883 S Green Rd,Floor 3,Reading,PA,22289,2017-12-11 00:00:00,,Street,Northeast
+S00072,MarketExpress,MarketExpress - Las Vegas,5292 N Hill Way,,Las Vegas,NV,62249,2021-08-22 00:00:00,,Mall,West
+000073,AsterionHouse,AsterionHouse - Atlanta,146  Hill St,,Atlanta,GA,27633,2017-12-12 00:00:00,,Outlet,Southeast
+S00074,QuickBuy,QuickBuy - Waterbury,9770 NE Washington Ct,,Waterbury,CT,70946,2016-06-23 00:00:00,,Street,Northeast
+S00075,BudgetShop,BudgetShop - Chicago,3714  View Ln,Unit 50,Chicago,IL,84069,2009-08-12 00:00:00,,Express,Midwest
+S00076,EssentialsPlus,EssentialsPlus - Atlanta,3084 W View Pl,,Atlanta,GA,65922,2017-09-27 00:00:00,2028-09-24 00:00:00,Outlet,Southeast
+S00077,MegaShop,MegaShop - Erie,4577 E Green Ave,,Erie,PA,94416,2013-11-26 00:00:00,,Mall,Northeast
+STORE0078,MegaShop,MegaShop - Lowell,1827  Hill Dr,Building E,Lowell,MA,30609,2012-12-17 00:00:00,,Superstore,Northeast
+000079,QuickBuy,QuickBuy - Charleston,7046 S Cedar Ave,Suite 636,Charleston,SC,21871,2012-09-04 00:00:00,,Street,Southeast
+S00080,AsterionHouse,AsterionHouse - Augusta,690 N Park Ct,,Augusta,GA,60331-7406,2023-02-20 00:00:00,,Street,Southeast
+S00081,BudgetShop,BudgetShop - Spartanburg,1550 S Green Dr,,Spartanburg,SC,16548,07/20/2010,,Warehouse,Southeast
+000082,QuickBuy,QuickBuy - Las Vegas,4593 SE Market Ln,,Las Vegas,NV,35121,2012-08-17 00:00:00,,Warehouse,West
+S00083,AsterionHouse,AsterionHouse - Orlando,572 N Main Ave,Unit 21,Orlando,FL,33472,10/13/2020,2031-10-11 00:00:00,Mall,Southeast
+S00084,MegaShop,MegaShop - Erie,6421 W Market Rd,,Erie,PA,74027,2012-08-13 00:00:00,,Superstore,Northeast
+S00085,PrimeGoods,PrimeGoods - Orlando,9155 S Forest Rd,,Orlando,FL,96205,2013-12-13 00:00:00,,Outlet,Southeast
+S00086,MegaShop,MegaShop - Raleigh,5785 W Forest Ct,Floor 5,Raleigh,NC,71332,2011-12-03 00:00:00,,Express,Southeast
+S00087,PrimeGoods,PrimeGoods - Norman,8790  Lake Dr,,Norman,OK,65731,2011-01-12 00:00:00,,Mall,Southwest
+S00088,FamilyStore,FamilyStore - Newark,7296 NE Park Pl,Floor 1,Newark,NJ,78056,2021-09-28 00:00:00,,Express,Northeast
+S00089,QuickBuy,QuickBuy - Houston,2635  Market Way,,Houston,TX,19596,06/29/2018,,Street,Southwest
+S00090,PrimeGoods,PrimeGoods - Trenton,3587 N Church Way,,Trenton,NJ,26029,2021-05-14 00:00:00,,Street,Northeast
+S00091,QuickBuy,QuickBuy - New York,1170 W Main Ct,,New York,NY,44051,2014-11-20 00:00:00,,Street,Northeast
+STORE0092,MegaShop,MegaShop - Hartford,6398 SW Elm St,,Hartford,CT,35122-6017,2023-04-25 00:00:00,,Outlet,Northeast
+S00093,EssentialsPlus,EssentialsPlus - Elizabeth,4284 W Maple Pl,,Elizabeth,NJ,,2006-11-05 00:00:00,,Street,Northeast
+000094,LuxeRetail,LuxeRetail - Tallahassee,5348 N Maple Ave,,Tallahassee,FL,40682,2021-01-19 00:00:00,,Express,Southeast
+S00095,MarketExpress,MarketExpress - Aurora,3671 S Park St,,Aurora,IL,91912,2006-04-23 00:00:00,,Superstore,Midwest
+S00096,PrimeGoods,PrimeGoods New York Westside,1634 N Elm Ave,,New York,NY,78673,2014-09-03 00:00:00,2019-09-02 00:00:00,Mall,Northeast
+S00097,PrimeGoods,PrimeGoods - Columbus,5775 E Cedar Dr,Floor 9,Columbus,GA,39118,2016-03-24 00:00:00,,Street,Southeast
+S00098,EssentialsPlus,EssentialsPlus - Spartanburg,8 E View Ct,,Spartanburg,SC,31038,2008-03-23 00:00:00,,Street,Southeast
+S00099,LuxeRetail,LuxeRetail Erie Plaza,688 S Maple Dr,,Erie,PA,73370,2017-10-15 00:00:00,,Mall,Northeast
+S00100,MarketExpress,MarketExpress - Newark,7834 N Cedar Blvd,Unit 9,Newark,NJ,91835,2001-11-17 00:00:00,,Mall,Northeast
+S00101,BudgetShop,BudgetShop - Albany,9891 S Lake Blvd,,Albany,NY,86975,2018-04-03 00:00:00,,Flagship,Northeast
+S00102,MarketExpress,MarketExpress - Elizabeth,6145  Washington Blvd,,Elizabeth,NJ,81906,2016-02-01 00:00:00,,Flagship,Northeast
+S00103,EssentialsPlus,EssentialsPlus - Columbus,4597 SE Pine Blvd,,Columbus,GA,18472,2016-04-06 00:00:00,2027-04-04 00:00:00,Street,Southeast
+S00104,MarketExpress,MarketExpress - Toledo,4494 E Cedar Rd,Floor 1,Toledo,OH,21240,2018-11-02 00:00:00,2023-11-01 00:00:00,Street,Midwest
+S00105,MegaShop,MegaShop Fort Worth Downtown,1349 E Cedar Blvd,,Fort Worth,TX,56403,2010-12-28 00:00:00,,Superstore,Southwest
+S00106,MarketExpress,MarketExpress - Toledo,3741  Washington Way,Unit 22,Toledo,OH,21190,2015-03-31 00:00:00,,Mall,Midwest
+S00107,EssentialsPlus,EssentialsPlus - Chicago,8334  Green Rd,Suite 752,Chicago,IL,,2020-05-18 00:00:00,2033-05-15 00:00:00,Mall,Midwest
+S00108,MegaShop,MegaShop - Stamford,183  Green Blvd,,Stamford,CT,54199,2020-05-01 00:00:00,,Outlet,Northeast
+000109,EssentialsPlus,EssentialsPlus - Philadelphia,5807  Oak Ave,,Philadelphia,PA,44542,2009-04-18 00:00:00,,Street,Northeast
+S00110,EssentialsPlus,EssentialsPlus Detroit Downtown,7545 S Pine Rd,,Detroit,MI,43154,2019-06-27 00:00:00,,Street,Midwest
+S00111,MegaShop,MegaShop - Lawton,1131 NE Pine Way,,Lawton,OK,52849,2022-12-11 00:00:00,,Outlet,Southwest
+S00112,MegaShop,MegaShop - Durham,7 S Park St,,Durham,NC,50379-1913,2009-05-28 00:00:00,,Street,Southeast
+S00113,BudgetShop,BudgetShop Albany Westside,9650 NW Park Pl,,Albany,NY,17597,2014-11-08 00:00:00,,Street,Northeast
+S00114,BudgetShop,BudgetShop - Los Angeles,8989 E Market Rd,Suite 835,Los Angeles,CA,86449,2020-03-11 00:00:00,,Mall,West
+STORE0115,EssentialsPlus,EssentialsPlus - Columbus,1628 SW Green Blvd,Building E,Columbus,OH,67169,2020-07-09 00:00:00,,Mall,Midwest
+STORE0116,MarketExpress,MarketExpress Hillsboro Eastside,3631  Cedar Dr,,Hillsboro,OR,56099,2018-05-09 00:00:00,,Street,West
+S00117,QuickBuy,QuickBuy Greensboro Westside,2809 W Main Blvd,,Greensboro,NC,32190,2016-11-29 00:00:00,,Flagship,Southeast
+STORE0118,PrimeGoods,PrimeGoods - Columbia,4118  River Blvd,,Columbia,SC,61151,2020-03-25 00:00:00,2031-03-23,Street,Southeast
+S00119,QuickBuy,QuickBuy - Reading,2236  Market St,,Reading,PA,87064-5897,2012-12-26 00:00:00,2019-12-25 00:00:00,Mall,Northeast
+S00120,LuxeRetail,LuxeRetail Lansing Center,7824 NW Oak Ave,,Lansing,MI,78487,2018-02-23 00:00:00,2025-02-21 00:00:00,Outlet,Midwest
+S00121,EssentialsPlus,EssentialsPlus - Spokane,7652  Maple Rd,,Spokane,WA,18244,2016-04-21 00:00:00,,Mall,West
+S00122,BudgetShop,BudgetShop - Charleston,7162  Oak Dr,,Charleston,SC,32440,2006-12-02 00:00:00,,Street,Southeast
+STORE0123,LuxeRetail,LuxeRetail - Portland,8390 W View Blvd,Floor 1,Portland,OR,81854,2016-04-12 00:00:00,,Express,West
+S00124,PrimeGoods,PrimeGoods - Erie,9216 NE Market Ave,,Erie,PA,48342-5072,2018-05-11 00:00:00,,Outlet,Northeast
+S00125,MegaShop,MegaShop - Durham,7171 W View Ln,,Durham,NC,70948,09/19/2010,,Street,Southeast
+S00126,BudgetShop,BudgetShop - Springfield,8089  Elm St,,Springfield,MA,11401,2007-04-17 00:00:00,2020-04-13,Mall,Northeast
+S00127,EssentialsPlus,EssentialsPlus - Orlando,2567 W Forest Ln,,Orlando,FL,30936,2012-01-18 00:00:00,,Outlet,Southeast
+S00128,BudgetShop,BudgetShop - Jersey City,8708  Lake Way,,Jersey City,NJ,71215,2020-05-01 00:00:00,,Street,Northeast
+STORE0129,QuickBuy,QuickBuy - Stamford,1073  Elm Pl,,Stamford,CT,46081-8763,2012-02-16 00:00:00,,Mall,Northeast
+S00130,PrimeGoods,PrimeGoods Spokane Eastside,1933 NW Pine Dr,,Spokane,WA,34272-7474,2020-01-05 00:00:00,,Street,West
+S00131,LuxeRetail,LuxeRetail - Columbia,9476  Green Ave,,Columbia,SC,60081,2017-08-13 00:00:00,,Express,Southeast
+000132,MarketExpress,MarketExpress - Aurora,3620 W Church Ln,Floor 7,Aurora,IL,91050,2012-05-29 00:00:00,,Express,Midwest
+STORE0133,PrimeGoods,PrimeGoods Salem Uptown,2766  Green Rd,,Salem,OR,62160,2013-10-19 00:00:00,,Mall,West
+S00134,LuxeRetail,LuxeRetail Wilmington Plaza,7424 NE Pine Ln,,Wilmington,NC,90070,2019-10-29 00:00:00,,Mall,Southeast
+S00135,MegaShop,MegaShop - Rochester,271  Main Blvd,Unit 40,Rochester,NY,94995,12/23/2008,,Street,Northeast
+S00136,MarketExpress,MarketExpress Lakewood Uptown,4308 E Pine Dr,,Lakewood,CO,55475,2017-01-27 00:00:00,,,West
+S00137,MarketExpress,MarketExpress - Macon,8502 SW Main Way,,Macon,GA,88077,2019-11-05 00:00:00,,Street,Southeast
+S00138,MarketExpress,MarketExpress - Orlando,4200 S Washington Dr,,Orlando,FL,29873,2022-01-03 00:00:00,,Street,Southeast
+S00139,MegaShop,MegaShop - Raleigh,8561 N Maple Blvd,Suite 925,Raleigh,NC,94892,2003-06-10 00:00:00,,Express,Southeast
+S00140,FamilyStore,FamilyStore - Greenville,1482  Market Rd,,Greenville,SC,96328,2011-05-31 00:00:00,,Mall,Southeast
+S00141,LuxeRetail,LuxeRetail Miami Plaza,8709  Forest Ln,Floor 2,Miami,FL,36049,2013-11-11 00:00:00,,Mall,Southeast
+S00142,PrimeGoods,PrimeGoods - Orlando,5694 SE Main Ave,,Orlando,FL,11988,2011-03-30 00:00:00,,Outlet,Southeast
+S00143,BudgetShop,BudgetShop Mesa Westside,1519  River Ct,Building G,Mesa,AZ,29233,2022-10-12 00:00:00,2030-10-10 00:00:00,Mall,Southwest
+S00144,QuickBuy,QuickBuy - Hillsboro,1272 SW Oak Ct,Building B,Hillsboro,OR,11920,06/03/2007,,Mall,West
+S00145,PrimeGoods,PrimeGoods - North Las Vegas,3677 SE River Blvd,,North Las Vegas,NV,85945,08/22/2013,,Flagship,West
+S00146,BudgetShop,BudgetShop - Hillsboro,5042  Hill St,,Hillsboro,OR,76897,2020-06-27 00:00:00,,Street,West
+S00147,BudgetShop,BudgetShop - Tallahassee,7787 SE Main St,,Tallahassee,FL,30025,2020-06-23 00:00:00,,Street,Southeast
+S00148,BudgetShop,BudgetShop - Akron,4971 NW Maple St,,Akron,OH,66704,2017-09-27 00:00:00,,Flagship,Midwest
+STORE0149,QuickBuy,QuickBuy - Atlanta,8469  Hill Rd,,Atlanta,GA,58516,2012-05-19 00:00:00,,Street,Southeast
+S00150,LuxeRetail,LuxeRetail - Seattle,6220  Pine Ct,Building F,Seattle,WA,71934,2019-10-07 00:00:00,2024-10-05 00:00:00,Outlet,West
+000151,MarketExpress,MarketExpress - Paterson,9929 E River Way,Building D,Paterson,NJ,53370,2017-06-24 00:00:00,,Outlet,Northeast
+S00152,MegaShop,MegaShop - Albany,4928  Washington Pl,,Albany,NY,71744,2013-07-31 00:00:00,,Superstore,Northeast
+S00153,MegaShop,MegaShop - Oklahoma City,3894  Park Pl,,Oklahoma City,OK,86274,2020-04-01 00:00:00,2033-03-29 00:00:00,Boutique,Southwest
+S00154,BudgetShop,BudgetShop - Newark,5992  View Rd,,Newark,NJ,61756,2009-01-05 00:00:00,,Outlet,Northeast
+S00155,EssentialsPlus,EssentialsPlus - Columbia,6240 N River Ave,,Columbia,SC,99211-2505,2015-05-20 00:00:00,,Mall,Southeast
+S00156,FamilyStore,FamilyStore - Naperville,4679  Market Dr,,Naperville,IL,86674,2014-12-23 00:00:00,,Street,Midwest
+S00157,PrimeGoods,PrimeGoods Allentown Downtown,1630  Hill St,,Allentown,PA,14886,2007-02-15 00:00:00,,Express,Northeast
