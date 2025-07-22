@@ -11,4 +11,5 @@ The main objective of the competition is to build a machine learning model capab
 ### References
 
 [1]: [Complete Time Series Analysis and Forecasting with Python](https://www.youtube.com/watch?v=eKiXtGzEjos&ab_channel=DataHeroes)
+
 [2]: [Forecasting: Principles and Practice, the Pythonic Way](https://otexts.com/fpppy/)
