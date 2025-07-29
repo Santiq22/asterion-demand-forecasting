@@ -1,0 +1,7 @@
+We can consider as variables: 
+ - 7 day rolling average
+ - dayly/weekly percentage change
+ - 30 day rolling volume
+ - cumulative variables in time
+ - a flag whether is weekend or not
+ - lagged values, using the shift() method
