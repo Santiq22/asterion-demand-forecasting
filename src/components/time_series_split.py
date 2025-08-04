@@ -23,7 +23,7 @@ class DataSplitConfig:
 class DataSplit:
     def __init__(self, split_on_variable : str):        
         # Path to the initial dataset
-        self.path = os.path.join('../../data/initial_datasets/eci_transactions.csv')
+        self.path = os.path.join('../../data/final_datasets/cleaned_datasets/eci_transactions_clean.csv')
         
         # Variable where to perform the split
         self.split_on_variable = split_on_variable

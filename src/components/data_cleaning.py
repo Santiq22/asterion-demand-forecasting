@@ -169,8 +169,8 @@ class DataCleaning:
 # =============================================================================================== #
 
 if __name__ == "__main__":
-    input_data = 'eci_product_master.csv'
-    output_data = 'eci_product_master_clean.csv'
+    input_data = 'eci_transactions.csv'
+    output_data = 'eci_transactions_clean.csv'
     
     obj = DataCleaning(input_data, output_data)
-    data = obj.initiate_data_cleaning_products()
+    data = obj.initiate_data_cleaning_transactions()
