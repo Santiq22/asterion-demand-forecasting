@@ -34,9 +34,9 @@ T(p) = p \, Q_0 \left( \frac{p}{p_0} \right)^E,
 
 or equivalently:
 
-```math
+$$
 T(p) = Q_0 \, p_0^{-E} \, p^{1+E} \tag{1}.
-```
+$$
 
 This model describes the revenue behavior for each product in each store, provided that the parameters $`Q_{0}`$ and $`E`$ are known.
 
