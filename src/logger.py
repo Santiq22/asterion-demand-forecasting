@@ -16,7 +16,6 @@ LOG_FILE = f"{datetime.now().strftime('%m_%d_%Y_%H_%M_%S')}.log"
 
 # Path to log files
 logs_path = os.path.join(os.getcwd(), '../', 'logs/')
-#logs_path = os.path.join('/mnt/c/Programacion/Data Science Competitions/urban-heat-islands/logs')
 
 # Create directory to store log files
 os.makedirs(logs_path, exist_ok = True)

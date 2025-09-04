@@ -1,9 +1,10 @@
-# Datasets
-eci_transactions.csv
-eci_transactions_clean.csv
-time_series/
+# Ignore data
+data/*
+*.csv
+*.parquet
 
-# Logs
+# Ignore notebooks checkpoints
+.ipynb_checkpoints/
+
+# Ignore logs
 logs/
-
-# Other files
