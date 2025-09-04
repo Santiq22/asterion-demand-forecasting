@@ -35,7 +35,7 @@ T(p) = p \, Q_0 \left( \frac{p}{p_0} \right)^E,
 or equivalently:
 
 ```math
-T(p) = Q_0 \, p_0^{-E} \, p^{1+E}. \tag{1}
+T(p) = Q_0 \, p_0^{-E} \, p^{1+E}.\ \ \ \ \ (1)
 ```
 
 This model describes the revenue behavior for each product in each store, provided that the parameters $`Q_{0}`$ and $`E`$ are known.
@@ -60,7 +60,7 @@ This allowed us to establish demand laws that best describe the financial behavi
 Having identified $`E`$ and $`Q_{0}`$, the **optimal price** can be derived from equation (1) as the price that maximizes profit:
 
 ```math
-p_{\text{opt}} = \left( \frac{p_0^E \, \hat{T}}{Q_0} \right)^{\frac{1}{1+E}} \tag{2}.
+p_{\text{opt}} = \left( \frac{p_0^E \, \hat{T}}{Q_0} \right)^{\frac{1}{1+E}}\ \ \ \ \ \ \ \ (2)
 ```
 
 In the equation above $`\hat{T}`$ is the predicted daily total sales for a product–store pair.
