@@ -19,16 +19,16 @@ import dill
 from holidays import US
 import lightgbm as lgb
 import math
-from numpy import array, isin, issubdtype, floating, mean, random, sum, unique, where
+from numpy import arange, array, isin, issubdtype, floating, mean, random, sum, unique, where
 from numpy import cos, exp, expm1, log, log1p, polyfit, sin, zeros, inf, nan, pi, float32, ndarray
-from pandas import date_range, read_csv, to_datetime, DataFrame, Series, Timestamp
+from pandas import concat, date_range, isna, notna, read_csv, to_datetime, DataFrame, Series, Timestamp
 from scipy import optimize
-from sklearn.metrics import r2_score
-from sklearn.metrics import make_scorer
+from sklearn.cluster import KMeans
+from sklearn.metrics import make_scorer, r2_score, silhouette_score
 r2 = make_scorer(r2_score)
 from sklearn.model_selection import GridSearchCV, RandomizedSearchCV, TimeSeriesSplit
 from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import StandardScaler, LabelEncoder
 from typing import List, Optional, Tuple
 
 # --- Neural Network
@@ -867,23 +867,37 @@ class StoreAwareForecastingV6:
         
         return df
 
-    def create_store_features(self, df: pd.DataFrame) -> pd.DataFrame:
+    def create_store_features(self, df: DataFrame) -> DataFrame:
         """
-        HEre we create the main feature engineering pipeline for a single time series.
+        Here we create the main feature engineering pipeline for a single time series.
         lags, rolling averages, date components, and calendar features
         """
-        df = df.sort_values("DATE").reset_index(drop=True).copy()
+        
+        df = df.sort_values("DATE").reset_index(drop = True).copy()
+        
+        # Winsorize time series
         df["SALES_F"] = winsorize_series(df["TOTAL_SALES"])
+        
+        # Add time features
         df["day_of_week"], df["month"], df["year"] = df["DATE"].dt.dayofweek, df["DATE"].dt.month, df["DATE"].dt.year
+        
+        # Add lags
         for lag in [1, 7, 14, 28]: df[f"sales_lag_{lag}"] = df["SALES_F"].shift(lag)
-        for w in [7, 14, 28]: df[f"sales_ma_{w}"] = df["SALES_F"].rolling(w, min_periods=1).mean()
-        f7 = df["DATE"].apply(lambda ts: self._fourier_terms(ts, 7, K=2))
-        f365 = df["DATE"].apply(lambda ts: self._fourier_terms(ts, 365, K=2))
-        df = pd.concat([df, pd.DataFrame(list(f7)).reset_index(drop=True)], axis=1)
-        df = pd.concat([df, pd.DataFrame(list(f365)).reset_index(drop=True)], axis=1)
+        
+        # Add moving average
+        for w in [7, 14, 28]: df[f"sales_ma_{w}"] = df["SALES_F"].rolling(w, min_periods = 1).mean()
+        
+        # Compute Fourier terms
+        f7 = df["DATE"].apply(lambda ts: self._fourier_terms(ts, 7, K = 2))
+        f365 = df["DATE"].apply(lambda ts: self._fourier_terms(ts, 365, K = 2))
+        
+        # Concat new DataFrames
+        df = concat([df, DataFrame(list(f7)).reset_index(drop = True)], axis = 1)
+        df = concat([df, DataFrame(list(f365)).reset_index(drop = True)], axis = 1)
         df = self._add_price_features(df)
+        
         if self.calendar is not None:
-            df = df.merge(self.calendar, on="DATE", how="left")
+            df = df.merge(self.calendar, on = "DATE", how = "left")
             for c in self.calendar.columns:
                 if c != "DATE": df[c] = df[c].fillna(0)
         return df
@@ -893,91 +907,137 @@ class StoreAwareForecastingV6:
         price = ["log_price", "elasticity_28d"]
         cal = [c for c in df_cols if c.startswith("cal_")]
         final_features = base + price + cal + ["store_type_encoded", "region_encoded", "horizon"]
-        return sorted(list(set(final_features)))
+        #return sorted(list(set(final_features)))
+        return sorted(final_features)
 
-    def _prepare_multi_horizon(self, df_feat: pd.DataFrame, horizons: tuple[int, ...]):
+    def _prepare_multi_horizon(self, df_feat: DataFrame, horizons: tuple[int, ...]):
         """
         Transforms the data for a direct multi-horizon forecasting strategy.
         It creates a separate training example for each forecast horizon (e.g., 1-day ahead, 2-days ahead, etc.)
         """
+        
         frames = []
         for h in horizons:
             tmp = df_feat.copy()
-            tmp["target"] = np.log1p(tmp["TOTAL_SALES"].shift(-h))
+            tmp["target"] = log1p(tmp["TOTAL_SALES"].shift(-h))
             tmp["horizon"] = h
-            frames.append(tmp.dropna(subset=["target"]))
-        all_df = pd.concat(frames, ignore_index=True).sort_values(["DATE", "horizon"])
+            frames.append(tmp.dropna(subset = ["target"]))
+            
+        all_df = concat(frames, ignore_index = True).sort_values(["DATE", "horizon"])
         feature_columns = self._feature_columns(all_df.columns)
         X = all_df[feature_columns].fillna(0)
         return X, all_df["target"], all_df["DATE"], feature_columns
 
-    def _encode_store_meta(self, df: pd.DataFrame, enc_store: LabelEncoder, enc_region: LabelEncoder) -> pd.DataFrame:
-        df["STORE_TYPE"], df["REGION"] = df["STORE_TYPE"].fillna("Unknown").astype(str), df["REGION"].fillna("Unknown").astype(str)
+    def _encode_store_meta(self, df: DataFrame, enc_store: LabelEncoder, enc_region: LabelEncoder) -> DataFrame:
+        """ Label encode the Store and Region of the input DataFrame. """
+        
+        # Fill NaNs
+        df["STORE_TYPE"] = df["STORE_TYPE"].fillna("Unknown").astype(str) 
+        df["REGION"] = df["REGION"].fillna("Unknown").astype(str)
+        
+        # Get classes of LabelEncoders
         st_classes, rg_classes = set(enc_store.classes_), set(enc_region.classes_)
+        
+        # Get values
         st_vals = [v if v in st_classes else "Unknown" for v in df["STORE_TYPE"]]
         rg_vals = [v if v in rg_classes else "Unknown" for v in df["REGION"]]
-        df["store_type_encoded"], df["region_encoded"] = enc_store.transform(st_vals), enc_region.transform(rg_vals)
+        
+        # Save in DataFrame
+        df["store_type_encoded"] = enc_store.transform(st_vals) 
+        df["region_encoded"] = enc_region.transform(rg_vals)
+        
         return df
 
-    def _series_descriptors(self, df: pd.DataFrame) -> pd.DataFrame:
+    def _series_descriptors(self, df: DataFrame) -> DataFrame:
         """
         Calculates a set of summary statistics for each time series.
         These descriptors are then used as features for the clustering algorithm
         """
+        
         rows = []
-        for (sid, sg), g in df.groupby(["STORE_ID", "subgroup"], sort=False):
+        for (sid, sg), g in df.groupby(["STORE_ID", "subgroup"], sort = False):
             n, g = len(g), g.sort_values("DATE")
+            
             if n < self.cluster_cfg.min_series_days: continue
+            
+            # Get average and standard deviation of total sales
             avg_sales, std_sales = g["TOTAL_SALES"].mean(), g["TOTAL_SALES"].std()
+            
+            # Get recent values
             recent = g.tail(60)
-            slope = np.polyfit(np.arange(len(recent)), recent["TOTAL_SALES"].values, 1)[0] if len(recent) > 1 else 0.0
+            
+            # Get slope of the linear function fit to total sales
+            slope = polyfit(arange(len(recent)), recent["TOTAL_SALES"].values, 1)[0] if len(recent) > 1 else 0.0
+            
+            # Get a reference price using the median of average sales price
             ref_price = g["AVG_SALES_PRICE"].median() if "AVG_SALES_PRICE" in g.columns and not g["AVG_SALES_PRICE"].isnull().all() else 0.0
-            promo_rate = (g["AVG_SALES_PRICE"] < 0.95 * ref_price).mean() if ref_price > 0 else 0.0
+            
+            # Get proportion of number of 5% or greater promos
+            promo_rate = (g["AVG_SALES_PRICE"] < 0.95*ref_price).mean() if ref_price > 0 else 0.0
+            
+            # Get elasticity computed using the last 28 days
             anchor_e = self._add_price_features(g.tail(28).copy())
             elasticity28 = anchor_e["elasticity_28d"].iloc[-1] if not anchor_e.empty else 0.0
+            
+            
             rows.append({"STORE_ID": str(sid), "subgroup": str(sg), "n_days": n, "avg_sales": avg_sales, "std_sales": std_sales,
-                "cv": std_sales / avg_sales if avg_sales > 0 else 0.0, "trend60": slope, "avg_price": g["AVG_SALES_PRICE"].mean(),
+                "cv": std_sales/avg_sales if avg_sales > 0 else 0.0, "trend60": slope, "avg_price": g["AVG_SALES_PRICE"].mean(),
                 "promo_rate": promo_rate, "elasticity28": elasticity28})
-        return pd.DataFrame(rows)
+            
+        return DataFrame(rows)
 
-    def fit_clusterer(self, df_all: pd.DataFrame):
+    def fit_clusterer(self, df_all: DataFrame):
         """
         Groups similar time series together using KMeans clustering.
         It automatically selects the best number of clusters k using the silhouette score.
         """
+        
         print("Fitting clusterer with dynamic k selection...")
+        
+        # Compute the descriptors to apply the K means
         desc = self._series_descriptors(df_all)
+        
         if desc.empty or len(desc) < max(self.cluster_cfg.k_range):
             print(f"Not enough series ({len(desc)}) for clustering. Skipping."); return
+        
+        # Apply StandarScaler transformation to the descriptors   
         X = desc[list(self.cluster_cfg.use_features)].fillna(0.0).values
         self.cluster_scaler = StandardScaler()
         Xs = self.cluster_scaler.fit_transform(X)
+        
         best_score, best_k = -1, self.cluster_cfg.k_range[0]
         for k in range(*self.cluster_cfg.k_range):
-            clusterer = KMeans(n_clusters=k, n_init='auto', random_state=self.cfg.seed)
+            clusterer = KMeans(n_clusters = k, n_init = 'auto', random_state = self.cfg.seed)
             labels = clusterer.fit_predict(Xs)
             score = silhouette_score(Xs, labels)
-            print(f"For k={k}, silhouette score is {score:.4f}")
+            print(f"For k = {k}, silhouette score is {score:.4f}")
             if score > best_score: best_score, best_k = score, k
+            
         print(f"Optimal k selected: {best_k} with score {best_score:.4f}")
-        self.clusterer = KMeans(n_clusters=best_k, n_init='auto', random_state=self.cfg.seed)
+        self.clusterer = KMeans(n_clusters = best_k, n_init = 'auto', random_state = self.cfg.seed)
         desc["cluster"] = self.clusterer.fit_predict(Xs)
         self.cluster_assignments = {(r["STORE_ID"], r["subgroup"]): int(r["cluster"]) for _, r in desc.iterrows()}
 
-    def train_global_and_cluster_models(self, df_all: pd.DataFrame):
+    def train_global_and_cluster_models(self, df_all: DataFrame):
         """
         Orchestrates the main training process:
         1. Tunes hyperparameters on the full dataset.
         2. Trains a specialized model for each identified cluster.
         3. Trains a global model on all data as a fallback.
         """
+        
         print("Generating features for all series...")
         feat_parts = [self.create_store_features(g) for _, g in df_all.groupby(["STORE_ID", "subgroup"])]
+        
         if not feat_parts:
             print("No features generated, aborting training.")
             return
-        feat = pd.concat(feat_parts, ignore_index=True)
-        feat["STORE_TYPE"], feat["REGION"] = feat["STORE_TYPE"].fillna("Unknown").astype(str), feat["REGION"].fillna("Unknown").astype(str)
+        
+        feat = concat(feat_parts, ignore_index = True)
+        feat["STORE_TYPE"] = feat["STORE_TYPE"].fillna("Unknown").astype(str)
+        feat["REGION"] = feat["REGION"].fillna("Unknown").astype(str)
+        
+        # Encode stores and regions
         self.global_encoders["store_type"] = LabelEncoder().fit(feat["STORE_TYPE"].unique().tolist() + ["Unknown"])
         self.global_encoders["region"] = LabelEncoder().fit(feat["REGION"].unique().tolist() + ["Unknown"])
         feat = self._encode_store_meta(feat, self.global_encoders["store_type"], self.global_encoders["region"])
@@ -990,33 +1050,48 @@ class StoreAwareForecastingV6:
         
         clusters = sorted(list(set(self.cluster_assignments.values())))
         print(f"Training {len(clusters)} cluster models...")
+        
         for cid in clusters:
             keys = {k for k, c in self.cluster_assignments.items() if c == cid}
             cluster_feat_idx = feat.set_index(['STORE_ID', 'subgroup']).index.map(lambda x: (str(x[0]), str(x[1]))).isin(keys)
             X_c, y_c, d_c, _ = self._prepare_multi_horizon(feat[cluster_feat_idx], self.cfg.horizons)
+            
             if X_c.empty: print(f"Skipping cluster {cid}, no data."); continue
-            tail_c = max(28, int(len(X_c) * 0.1))
+            
+            # Get training and validation dataset
+            tail_c = max(28, int(len(X_c)*0.1))
             X_tr_c, y_tr_c = X_c.iloc[:-tail_c], y_c.iloc[:-tail_c]
             w_tr_c = time_decay_weights(d_c.iloc[:-tail_c], self.cfg.decay_halflife_days)
             X_va_c, y_va_c = X_c.iloc[-tail_c:], y_c.iloc[-tail_c:]
-            model_c = lgb.train({**BASE_PARAMS, **tuned_params}, lgb.Dataset(X_tr_c, label=y_tr_c, weight=w_tr_c),
-                num_boost_round=self.cfg.max_rounds, valid_sets=[lgb.Dataset(X_va_c, label=y_va_c)],
-                callbacks=[lgb.early_stopping(self.cfg.early_stop), lgb.log_evaluation(1000)])
+            
+            model_c = lgb.train({**BASE_PARAMS, **tuned_params}, 
+                                lgb.Dataset(X_tr_c, label = y_tr_c, weight = w_tr_c),
+                                num_boost_round = self.cfg.max_rounds, 
+                                valid_sets = [lgb.Dataset(X_va_c, label = y_va_c)],
+                                callbacks = [lgb.early_stopping(self.cfg.early_stop), 
+                                             lgb.log_evaluation(1000)])
+            
             self.cluster_models[cid] = {"model": model_c, "feature_columns": f_cols}
             print(f"Cluster {cid} model trained.")
         
         print("Training global model...")
-        tail_size = max(28 * 5, int(len(X) * 0.05))
+        tail_size = max(28*5, int(len(X)*0.05))
         X_tr, y_tr, w_tr = X.iloc[:-tail_size], y.iloc[:-tail_size], time_decay_weights(dates.iloc[:-tail_size], self.cfg.decay_halflife_days)
         X_va, y_va = X.iloc[-tail_size:], y.iloc[-tail_size:]
-        model = lgb.train({**BASE_PARAMS, **tuned_params}, lgb.Dataset(X_tr, label=y_tr, weight=w_tr),
-            num_boost_round=self.cfg.max_rounds, valid_sets=[lgb.Dataset(X_va, label=y_va)],
-            callbacks=[lgb.early_stopping(self.cfg.early_stop), lgb.log_evaluation(1000)])
+        
+        model = lgb.train({**BASE_PARAMS, **tuned_params}, 
+                          lgb.Dataset(X_tr, label = y_tr, weight = w_tr),
+                          num_boost_round = self.cfg.max_rounds, 
+                          valid_sets = [lgb.Dataset(X_va, label=y_va)],
+                          callbacks = [lgb.early_stopping(self.cfg.early_stop), 
+                                       lgb.log_evaluation(1000)])
+        
         self.global_model = {"model": model, "feature_columns": f_cols}
         print("Global model trained.")
         
-    def _features_for_anchor(self, hist: pd.DataFrame) -> pd.DataFrame:
+    def _features_for_anchor(self, hist: DataFrame) -> DataFrame:
         """Generates the feature set for the very last data point of a series"""
+        
         return self.create_store_features(hist).tail(1)
         
     def _fallback_predict(self, store: str, subgroup: str) -> float:
@@ -1027,10 +1102,11 @@ class StoreAwareForecastingV6:
         key = (store, subgroup)
         if key in self.store_perf: return self.store_perf[key]["avg_sales"]
         mean_val = self.global_data[self.global_data["subgroup"] == subgroup]["TOTAL_SALES"].mean()
-        return mean_val if pd.notna(mean_val) else self.global_data["TOTAL_SALES"].mean()
+        return mean_val if notna(mean_val) else self.global_data["TOTAL_SALES"].mean()
 
     def train_all(self):
         """Runs the complete training pipeline from data loading to model training"""
+        
         print("TRAINING")
         self.global_data = self.load_historical_data()
         if self.global_data is None or self.global_data.empty: return
@@ -1041,10 +1117,10 @@ class StoreAwareForecastingV6:
         start_date_test = test_ids["DATE"].min()
         end_date_test = test_ids["DATE"].max()
         
-        start = min(d for d in [start_date_hist, start_date_test] if pd.notna(d))
-        end = max(d for d in [end_date_hist, end_date_test] if pd.notna(d))
+        start = min(d for d in [start_date_hist, start_date_test] if notna(d))
+        end = max(d for d in [end_date_hist, end_date_test] if notna(d))
 
-        if pd.isna(start) or pd.isna(end):
+        if isna(start) or isna(end):
             print("Could not determine a valid date range. Aborting."); return
 
         self.build_calendar(start, end)
@@ -1069,7 +1145,7 @@ class StoreAwareForecastingV6:
             # The "anchor" is the last day of historical data which we predict from.
             t0, f_anchor, key = hist["DATE"].max(), self._features_for_anchor(hist), (store, subgroup)
             for _, row in group_df.iterrows():
-                h = max(1, min(7, (pd.Timestamp(row["DATE"]) - t0).days))
+                h = max(1, min(7, (Timestamp(row["DATE"]) - t0).days))
                 f_anchor_h = f_anchor.copy()
                 f_anchor_h["horizon"] = h
                 cid = self.cluster_assignments.get(key)
@@ -1077,13 +1153,15 @@ class StoreAwareForecastingV6:
                 if not model_info: pred = self._fallback_predict(store, subgroup)
                 else:
                     f_pred = self._encode_store_meta(f_anchor_h, self.global_encoders["store_type"], self.global_encoders["region"])
-                    X = f_pred.reindex(columns=model_info["feature_columns"], fill_value=0)
-                    p_log = model_info["model"].predict(X, num_iteration=model_info["model"].best_iteration)[0]
-                    pred = np.expm1(p_log)
+                    X = f_pred.reindex(columns = model_info["feature_columns"], fill_value = 0)
+                    p_log = model_info["model"].predict(X, num_iteration = model_info["model"].best_iteration)[0]
+                    pred = expm1(p_log)
+                    
                 preds.append({"STORE_SUBGROUP_DATE_ID": row["STORE_SUBGROUP_DATE_ID"], "TOTAL_SALES": max(0.1, float(pred))})
-        dfp = pd.DataFrame(preds)
+        dfp = DataFrame(preds)
         out = f"{self.output_folder}/competition_predictions_v6_final.csv"
-        dfp.to_csv(out, index=False)
+        dfp.to_csv(out, index = False)
         print(f"Predictions saved to: {out}")
+        
         return dfp
 # =============================================================================================== #
